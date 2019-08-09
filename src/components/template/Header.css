@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    background: rgb(249,134,145);
+    color: #fff;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+}
+
+.header h1 ruby {
+    font-size: 1.2rem;
+}
+.header h1 rt {
+    font-size: 1.2rem;
+}
