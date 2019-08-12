@@ -1,0 +1,14 @@
+.menu-item{
+    border: none;
+    border-radius: none;
+    width: 95%;
+    padding: 10px;
+    margin: 5px;
+    background: white;
+    border-radius: 20px;
+}
+
+
+.menu-item:first-child {
+    margin-top: 10px;
+}

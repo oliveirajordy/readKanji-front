@@ -1,10 +1,10 @@
 .header {
     display: flex;
-    flex-direction: row;
-    align-content: center;
+    justify-content: center;
     align-items: center;
-    background: rgb(249,134,145);
+    background: linear-gradient(356deg, rgba(189,0,41,1) 53%, rgba(235,94,107,1) 78%, rgba(220,53,69,1) 97%);
     color: #fff;
+    width: 100%;
 }
 
 .header h1 {
@@ -15,5 +15,5 @@
     font-size: 1.2rem;
 }
 .header h1 rt {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }

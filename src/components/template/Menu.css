@@ -1,8 +1,9 @@
 .menu {
     display: flex;
     flex-direction: column;
-    align-content: center;
+    justify-content: flex-start;
     align-items: center;
 
     padding: 0;
+    background-color:  rgba(189,0,41,1);
 }
