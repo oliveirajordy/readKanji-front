@@ -34,14 +34,13 @@ function Settings(props) {
                     <div className="row">
                         <RadioButtons title="Converter para" name="converterPara" value={data.convertFor} options={['Hiragana', 'Katakana', 'Romaji']} values={['hiragana', 'katakana', 'romaji']} function={setConvertFor} />
                         <RadioButtons title="Converter como" name="converterComo" value={data.convertAs} options={['Normal', 'Spaced', 'Okurigana', 'Furigana']} values={['normal', 'spaced', 'okurigana', 'furigana']} function={setConvertAs} />
-                        {/*<RadioButtons title="Converter Offline (em construção)" name="converterOffline" valuesOn={props.values} options={['Sim', 'Não']} values={[true, false]} function={props.changeConverter} disabled={true} />
-                        <RadioButtons title="Ativar Dicionário (em construção)" name="ativarDicionario" valuesOn={props.values} options={['Sim', 'Não']} values={[true, false]} function={props.changeConverter} disabled={true} /> */}
+                        <RadioButtons title="Converter Offline (em construção)" name="converterOffline" value={data.convertOffline} options={['Sim', 'Não']} values={[true, false]} disabled={true} />
                     </div>
                     <h5 className="card-title">Configuração de Cores e Tamanhos</h5>
                     <div className="row">
                         <RadioButtons title="Tema" name="theme" value={props.theme} options={['Dark', 'Light']} values={['dark', 'light']} function={props.setTheme} />
-                        {/*<RadioButtons title="Cor da Fonte" name="textColor" valuesOn={props.sty} options={['Preto', 'Branco', 'Cinza']} values={['text-dark','text-light','text-secondary']} function={props.changeTheme} />
-                        <RadioButtons title="Tamanho da Fonte" name="fontSize" valuesOn={props.sty} options={['Pequeno', 'Normal', 'Grande']} values={['0.9rem','1rem','1.3rem']} function={props.changeTheme} /> */}
+                        {/*<RadioButtons title="Cor da Fonte" name="textColor" valuesOn={props.sty} options={['Preto', 'Branco', 'Cinza']} values={['text-dark','text-light','text-secondary']} function={props.changeTheme} />*/}
+                        <RadioButtons title="Tamanho da Fonte" name="fontSize" value={props.fontSize} options={['Pequeno', 'Normal', 'Grande']} values={['small-size', 'normal-size', 'big-size']} function={props.changeFontSize} />
                     </div>
                 </div>
             </div>

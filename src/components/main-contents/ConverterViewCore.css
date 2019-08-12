@@ -1,0 +1,18 @@
+.converter-view-core {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.text-fild {
+    flex-grow: 1;
+}
+
+div.DraftEditor-root {
+    height: 100%;
+}
+
+div.DraftEditor-editorContainer,
+div.public-DraftEditor-content {
+  height: 100%;
+}

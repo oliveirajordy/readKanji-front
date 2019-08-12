@@ -11,8 +11,9 @@ function App() {
 
   //inicialização e estrutura geral do estado
   const INITIAL_STATE = {
-    content: 'settings',
-    theme: localStorage.getItem('__theme') || 'light'
+    content: 'converter',
+    theme: localStorage.getItem('__theme') || 'light',
+    fontSize: localStorage.getItem('__fontSize') || 'normal-size'
   };
 
   const [data, setData] = useState(INITIAL_STATE)
@@ -26,11 +27,16 @@ function App() {
     setData({ ...data, theme })
   }
 
+  const setFontSize = fontSize => {
+    localStorage.setItem('__fontSize', fontSize)
+    setData({ ...data, fontSize })
+  }
+
   return (
     <div className="App">
       <Header />
       <Menu content={data.content} setContent={setContent} />
-      <Content content={data.content} theme={data.theme} setTheme={setTheme} />
+      <Content content={data.content} theme={data.theme} setTheme={setTheme} fontSize={data.fontSize} changeFontSize={setFontSize} />
     </div>
   );
 }
