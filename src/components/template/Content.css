@@ -2,14 +2,18 @@
     
 }
 
+.content ruby > rt {
+    font-size: 70%;
+}
+
 .content.small-size{
     font-size: 0.9rem;
 }
 
 .content.normal-size{
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .content.big-size{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }

@@ -6,6 +6,8 @@
 
 .text-fild {
     flex-grow: 1;
+    width: 70%;
+    align-self: center;
 }
 
 div.DraftEditor-root {
