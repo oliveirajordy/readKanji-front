@@ -12,6 +12,7 @@ import axios from 'axios'
 const INITIAL_STATE = {
     convertedText: '',
     readOnly: false,
+    loadMsg: 'Convertendo'
 }
 
 function ConverterViewCore(props) {
@@ -29,13 +30,19 @@ function ConverterViewCore(props) {
             mode: localStorage.getItem('convertAs') || 'normal'
         }
 
-        axios.post('http://localhost:3001/converter', { text, settings })
+        axios.post('http://10.0.0.180:3001/converter', { text, settings })
             .then(resp => {
                 // setEditorData(EditorState.createWithContent(convertedSatate))
                 setData({ ...data, readOnly: true, convertedText: resp.data })
                 setLoadOn(false)
             })
-            .catch(err => console.log(err))
+            .catch(err => {
+                setData({ ...data, loadMsg: 'Erro na conversão tente mais tarde' })
+                setTimeout(_ => {
+                    setLoadOn(false)
+                    setData({...data, loadMsg: 'Convertendo' })
+                }, 1500)
+            })
     }
 
     const clear = _ => {
@@ -49,12 +56,12 @@ function ConverterViewCore(props) {
 
     return (
         <div className="converter-view-core">
-            <div className="btn btn-group d-flex m-0 p-0 border-0">
+            <div className="btn btn-group d-flex m-0 p-0 border-0 buttons">
                 <button className="btn btn-secondary first-button" onClick={editCurrentContent}>Editart</button>
                 <button className="btn btn-secondary border-left rounded-0 " onClick={serverSideConvert}>Converter</button>
                 <button className="btn btn-secondary border-left last-button" onClick={clear}>Linpar</button>
             </div>
-            {loadOn && <LoadComponent msg='Convertendo' />}
+            {loadOn && <LoadComponent msg={data.loadMsg} />}
             {!loadOn && <div className="text-fild p-2">
                 {!data.readOnly && <Editor editorState={editorData} onChange={setEditorData} readOnly={data.readOnly} />}
                 {data.readOnly && <div className="viewdive" dangerouslySetInnerHTML={{ __html: data.convertedText }} ></div>}

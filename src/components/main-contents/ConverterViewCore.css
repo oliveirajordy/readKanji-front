@@ -4,6 +4,7 @@
     height: 100%;
 }
 
+
 .converter-view-core {
     font-weight: 600;
 }
@@ -31,4 +32,10 @@ div.DraftEditor-root {
 div.DraftEditor-editorContainer,
 div.public-DraftEditor-content {
     height: 100%;
+}
+
+@media(max-width:758px){
+    .text-fild{
+        width: 100%;
+    }
 }

@@ -7,3 +7,41 @@
     padding: 0;
     background-color:  rgba(189,0,41,1);
 }
+
+.toggle-menu {
+    display:none;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(189,0,41,1);
+    outline: none;
+    outline-offset: none;
+}
+
+.toggle-menu:focus{
+    outline: 0px;
+    outline-offset: 0px;
+}
+
+@media(max-width:758px){
+    .menu{
+        display: none;
+    }
+    .menu.actived{
+        display: unset;
+        position: fixed;
+        width: 100vw;
+        height: 100%;
+        top: 60px;
+        left: 0px;
+        z-index: 9999999;
+        background-color: rgba(189,0,41,0.7);
+        overflow: auto;
+    }
+
+    .toggle-menu{
+        display: unset;
+        border: none;
+        color:#fff;
+        
+    }
+}
