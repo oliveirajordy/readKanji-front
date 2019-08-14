@@ -1,4 +1,4 @@
-.home{
+.home {
     border-bottom: none;
     border-right: none;
     border-radius: 5px 0px 0px 0px;
@@ -9,4 +9,12 @@
 
 .home h2 {
     margin-top: 0px;
+}
+
+.dark hr {
+    background: #fff;
+}
+
+.light hr {
+    background: #444;
 }

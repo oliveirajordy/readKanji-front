@@ -50,9 +50,9 @@ function ConverterViewCore(props) {
     return (
         <div className="converter-view-core">
             <div className="btn btn-group d-flex m-0 p-0 border-0">
-                <button className="btn btn-secondary rounded-0" onClick={editCurrentContent}>Editart</button>
-                <button className="btn btn-secondary border-left" onClick={serverSideConvert}>Converter</button>
-                <button className="btn btn-secondary rounded-0 border-left" onClick={clear}>Linpar</button>
+                <button className="btn btn-secondary first-button" onClick={editCurrentContent}>Editart</button>
+                <button className="btn btn-secondary border-left rounded-0 " onClick={serverSideConvert}>Converter</button>
+                <button className="btn btn-secondary border-left last-button" onClick={clear}>Linpar</button>
             </div>
             {loadOn && <LoadComponent msg='Convertendo' />}
             {!loadOn && <div className="text-fild p-2">

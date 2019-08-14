@@ -1,13 +1,35 @@
-.menu-item{
+.menu-item {
     border: none;
-    border-radius: none;
-    width: 95%;
+    border-bottom: 1px solid #fff;
+    width: 100%;
     padding: 10px;
     margin: 5px;
-    background: white;
-    border-radius: 20px;
+    background: #aaa0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
+.menu-item img {
+    height: 14px;
+    fill: #fff;
+    margin-left: 5px;
+}
+
+.menu-item:active {
+    outline: 0px;
+    outline-offset: 0px;
+}
+
+.menu-item:disabled img {
+    display: none;
+}
+
+.menu-item:disabled {
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+}
 
 .menu-item:first-child {
     margin-top: 10px;

@@ -4,6 +4,20 @@
     height: 100%;
 }
 
+.converter-view-core {
+    font-weight: 600;
+}
+
+.converter-view-core .first-button {
+    border-bottom-left-radius: 7px;
+    border-top-left-radius: 0px;
+}
+
+.converter-view-core .last-button {
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 0px;
+}
+
 .text-fild {
     flex-grow: 1;
     width: 70%;
@@ -16,5 +30,5 @@ div.DraftEditor-root {
 
 div.DraftEditor-editorContainer,
 div.public-DraftEditor-content {
-  height: 100%;
+    height: 100%;
 }
